@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>DevOps Topologies</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    </head>
+    
+    <body>      
+    <header>
+        <div class="container">
+            <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="DevOps Topologies"/></a>
+            </div>
+
+            <div class="header-title">
+            <h1>What Team Structure is Right for DevOps to Flourish?</h1>
+                <a class="down-arrow" href="#intro"><i class="fa fa-angle-down"></i></a>
+            </div>
+        </div>
+    </header>
+        
+    <div id="intro">
+    <div class="full-width-section" style="background-color:#fff;">
+        <div class="container">
+            <h4>Introduction</h4>
+            
+            <p>The primary goal of any DevOps setup within an organisation is to improve the delivery of value for customers and the business, not in itself to reduce costs, increase automation, or drive everything from configuration management; this means that different organisations might need different team structures in order for effective Dev and Ops collaboration to take place.</p>
+        </div>
+    </div>
+    </div>
+        
+    <div class="full-width-section dark" style="background-color:#15253d;">
+        <div class="container">
+        <div class="row">
+        <div class="col-1-2">
+            <p>So what team structure is right for DevOps to flourish? Clearly, there is no magic conformation or team topology which will suit every organisation. However, it is useful to characterise a small number of different models for team structures, some of which suit certain organisations better than others. By exploring the strengths and weaknesses of these team structures (or ‘topologies’), we can identify the team structure which might work best for DevOps practices in our own organisations, taking into account Conway’s Law.</p>  
+        </div>
+            
+        <div class="col-1-2">
+            <p>Most of these DevOps topologies have been described elsewhere before; in particular, Lawrence Sweeney of CollabNet goes into useful detail in a comment on Ben Kepes’s blog about what I characterise here as Anti-Type B (DevOps Silo), Type 3 (IaaS), and Type 1 (Smooth Integration). The DevOpsGuys have a list of Twelve DevOps Anti-Patterns, and Jez Humble, Gene Kim, Damon Edwards (and many others) have said similar things. I have added here three additional ‘topologies’ which I’ve not seen or heard discussed much (Fully Embedded, DevOps-as-a-Service, and Temporary DevOps Team).</p>  
+        </div>
+        </div>
+        </div>
+        
+        <div class="clear"></div>
+    </div>
+        
+    <div class="full-width-section dark" style="background:url(images/bg-orange.jpg);">
+        <div class="container">
+            <h2><strong>DevOps</strong> Anti-Types</h2>
+            
+            <div class="sub-heading">
+            <p>First of all, it’s useful to look at some bad practices, what
+we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
+            </div>
+        </div>
+    </div>
+        
+    <!--<div class="sub-nav" style="background-color:#e95234;">
+        <div class="container">
+        <ul>
+        <li><a href="#"><strong>Anti-Type A</strong></a></li>  
+        <li><a href="#"><strong>Anti-Type B</strong></a></li>  
+        <li><a href="#"><strong>Anti-Type C</strong></a></li> 
+        <li><a href="#"><strong>Anti-Type D</strong></a></li> 
+        <li><a href="#"><strong>Anti-Type E</strong></a></li> 
+        <li><a href="#"><strong>Anti-Type F</strong></a></li> 
+        <li><a href="#"><strong>Anti-Type G</strong></a></li> 
+        </ul>
+        </div>
+    </div>-->
+        
+    <div class="full-width-section anti-types">
+        <div class="container">
+        <div class="row">    
+        <div class="col-1-2">
+            <h5><strong>Anti-Type A:</strong> Separate Silos</h5>
+
+            <p>This is the classic ‘throw it over the wall’ split between Dev and Ops. It means that story points can be claimed early (DONE means ‘feature-complete’, but not working in Production), and software operability suffers because Devs do not have enough context for operational features and Ops folk do not have time or inclination to engage Devs in order to fix the problems before the software goes live.</p>
+
+            <p>We likely all know this topology is bad, but I think there are actually worse topologies; at least with Anti-Type A (Separate Silos), we know there is a problem.</p>
+        </div>
+            
+        <div class="col-1-2">
+            <div class="spacer"></div>
+            <img src="images/anti-type-a.png" alt="Anti-Type A"/>
+        </div>
+        </div>    
+            
+        <div class="row">
+        <div class="col-1-2">
+            <div class="spacer"></div>
+            <img src="images/anti-type-b.png" alt="Anti-Type B"/>
+        </div>
+            
+        <div class="col-1-2">
+            <h5><strong>Anti-Type B:</strong> Separate DevOps Silo</h5>
+
+            <p>The DevOps Silo (Anti-Type B) typically results from a manager or exec deciding that they “need a bit of this DevOps thing” and starting a ‘DevOps team’ (probably full of people known as ‘a DevOp‘). The members of the DevOps team quickly form another silo, keeping Dev and Ops further apart than ever as they defend their corner, skills, and toolset from the ‘clueless Devs’ and ‘dinosaur Ops’ people.</p>
+
+            <p>The only situation where a separate DevOps silo really makes sense is when the team is temporary, lasting less than (say) 12 or 18 months, with the express purpose of bringing Dev and Ops closer together, and with a clear mandate to make the DevOps team superfluous after that time; this becomes what I have called a Type 5 DevOps Topology (below).</p>
+        </div>
+        </div>    
+        
+        <div class="row">
+        <div class="col-1-2">
+            <h5><strong>Anti-Type C:</strong> "We Don't Need Ops"</h5>
+
+            <p>This topology is borne of a combination of naivety and arrogance from developers and development managers, particularly when starting on new projects or systems. Assuming that Ops is now a thing of the past (“we have the Cloud now, right?”), the developers wildly underestimate the complexity and importance of operational skills and activities, and believe that they can do without them, or just cover them in spare hours.</p>
+
+            <p>Such an Anti-Type C DevOps topology will probably end up needing either a Type 3 (IaaS) or a Type 4 DevOps topology (DevOps-as-a-Service) when their software becomes more involved and operational activities start to swamp ‘development’ (aka coding) time. If only such teams recognised the importance of Operations as a discipline as important and valuable as software development, they would be able to avoid much pain and unnecessary (and quite basic) operational mistakes.</p>
+        </div>
+            
+        <div class="col-1-2">
+            <div class="spacer"></div>
+            <img src="images/anti-type-c.png" alt="Anti-Type C"/>
+        </div>
+        </div>
+            
+        <div class="row">    
+        <div class="col-1-2">
+            <div class="spacer"></div>
+            <img src="images/anti-type-d.png" alt="Anti-Type D"/>
+        </div>
+            
+        <div class="col-1-2">
+            <h5><strong>Anti-Type D:</strong> ‘DevOps’ team as another Dev team</h5>
+
+            <p>This is the classic ‘throw it over the wall’ split between Dev and Ops. It means that story points can be claimed early (DONE means ‘feature-complete’, but not working in Production), and software operability suffers because Devs do not have enough context for operational features and Ops folk do not have time or inclination to engage Devs in order to fix the problems before the software goes live.</p>
+
+            <p>We likely all know this topology is bad, but I think there are actually worse topologies; at least with Anti-Type A (Separate Silos), we know there is a problem.</p>
+        </div>
+        </div>    
+            
+        <div class="row">    
+        <div class="col-1-2">
+            <h5><strong>Anti-Type E:</strong> DevOps as the new SysAdmin team</h5>
+
+            <p>This is the classic ‘throw it over the wall’ split between Dev and Ops. It means that story points can be claimed early (DONE means ‘feature-complete’, but not working in Production), and software operability suffers because Devs do not have enough context for operational features and Ops folk do not have time or inclination to engage Devs in order to fix the problems before the software goes live.</p>
+
+            <p>We likely all know this topology is bad, but I think there are actually worse topologies; at least with Anti-Type A (Separate Silos), we know there is a problem.</p>
+        </div>
+            
+        <div class="col-1-2">
+            <div class="spacer"></div>
+            <img src="images/anti-type-e.png" alt="Anti-Type E"/>
+        </div>
+        </div>     
+        
+        <div class="row">
+        <div class="col-1-2">
+            <div class="spacer"></div>
+            <img src="images/anti-type-f.png" alt="Anti-Type F"/>
+        </div>
+            
+        <div class="col-1-2">
+            <h5><strong>Anti-Type F:</strong> Ops embedded in a Dev Team</h5>
+
+            <p>This is the classic ‘throw it over the wall’ split between Dev and Ops. It means that story points can be claimed early (DONE means ‘feature-complete’, but not working in Production), and software operability suffers because Devs do not have enough context for operational features and Ops folk do not have time or inclination to engage Devs in order to fix the problems before the software goes live.</p>
+
+            <p>We likely all know this topology is bad, but I think there are actually worse topologies; at least with Anti-Type A (Separate Silos), we know there is a problem.</p>
+        </div>
+        </div>    
+            
+        <div class="row">
+        <div class="col-1-2">
+            <h5><strong>Anti-Type G:</strong> Dev DBA Gap</h5>
+
+            <p>This is the classic ‘throw it over the wall’ split between Dev and Ops. It means that story points can be claimed early (DONE means ‘feature-complete’, but not working in Production), and software operability suffers because Devs do not have enough context for operational features and Ops folk do not have time or inclination to engage Devs in order to fix the problems before the software goes live.</p>
+
+            <p>We likely all know this topology is bad, but I think there are actually worse topologies; at least with Anti-Type A (Separate Silos), we know there is a problem.</p>
+        </div>
+            
+        <div class="col-1-2">
+            <div class="spacer"></div>
+            <img src="images/anti-type-g.png" alt="Anti-Type G"/>
+        </div> 
+        </div>
+                   
+        </div>
+        
+        <div class="clear"></div>
+    </div>
+        
+        <div class="full-width-section dark" style="background:url(images/bg-lt-blue.jpg);">
+        <div class="container">
+            <h2><strong>DevOps</strong> Team Topologies</h2>
+            
+            <div class="sub-heading">
+            <p>First of all, it’s useful to look at some bad practices, what
+we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
+            </div>
+        </div>
+    </div>
+        
+    <!--<div class="sub-nav" style="background-color:#e95234;">
+        <div class="container">
+        <ul>
+        <li><a href="#"><strong>Anti-Type A</strong></a></li>  
+        <li><a href="#"><strong>Anti-Type B</strong></a></li>  
+        <li><a href="#"><strong>Anti-Type C</strong></a></li> 
+        <li><a href="#"><strong>Anti-Type D</strong></a></li> 
+        <li><a href="#"><strong>Anti-Type E</strong></a></li> 
+        <li><a href="#"><strong>Anti-Type F</strong></a></li> 
+        <li><a href="#"><strong>Anti-Type G</strong></a></li> 
+        </ul>
+        </div>
+    </div>-->
+        
+    <div class="full-width-section topologies">
+        <div class="container">
+        <div class="row">
+        <div class="col-1-2">
+            <h5><strong>Type 1:</strong> Smooth Collaboration</h5>
+
+            <p>This is the ‘promised land’ of DevOps: smooth collaboration between Dev teams and Ops teams, each specialising where needed, but also sharing where needed. There are likely many separate Dev teams, each working on a separate or semi-separate product stack.</p>
+
+            <p>My sense is that the Type 1 Smooth Collaboration model needs quite substantial organisational change to establish it, and a good degree of competence higher up in the technical management team. Dev and Ops must have a clearly expressed and demonstrably effective shared goal (‘Delivering Reliable, Frequent Changes’, or whatever). Ops folk must be comfortable pairing with Devs and get to grips with test-driven coding and Git, and Devs must take operational features seriously and seek out Ops people for input into logging implementations, and so on, all of which needs quite a culture change from the recent past.</p>
+        </div>
+            
+        <div class="col-1-2">
+            <div class="spacer"></div>
+            <img src="images/type-1.png" alt="Type 1"/>
+            <div class="suitability high">
+                <i class="fa fa-check-circle"></i>
+                <div class="suitability-inner">
+                <p><strong>Type 1 suitability:</strong> an organisation with strong technical leadership.<br/>
+        <strong>Potential effectiveness:</strong> <strong><span>HIGH</span></strong></p>
+                </div>
+            </div>
+        </div>
+        </div>
+            
+        <div class="row">
+        <div class="col-1-2">
+            <div class="spacer"></div>
+            <img src="images/type-2.png" alt="Type 2"/>
+            <div class="suitability high">
+                <i class="fa fa-check-circle"></i>
+                <div class="suitability-inner">
+                <p><strong>Type 2 suitability:</strong> organisations with a single main web-based product or service.<br/>
+        <strong>Potential effectiveness:</strong> <strong><span>HIGH</span></strong></p>
+                </div>
+            </div>
+        </div>
+            
+        <div class="col-1-2">
+            <h5><strong>Type 2:</strong> Fully Embedded</h5>
+
+            <p>Where operations people have been fully embedded within product development teams, we see a Type 2 topology. There is so little separation between Dev and Ops that all people are highly focused on a shared purpose; this is arguable a form of Type 1, but it has some special features.</p>
+
+            <p>Organisations such as Netflix and Facebook with effectively a single web-based product have achieved this Type 2 Fully Embedded topology, but I think it’s probably not hugely applicable outside a narrow product focus, because the budgetary constraints and context-switching typically present in an organisation with multiple product streams will probably force Dev and Ops further apart (say, back to a Type 1 model). The Fully Embedded topology might also be called ‘NoOps‘, as there is no distinct or visible Operations team (although the Netflix NoOps might also be Type 3, IaaS).</p>
+        </div>
+        </div>    
+        
+        <div class="row">
+        <div class="col-1-2">
+            <h5><strong>Type 3:</strong> Infrastructure-as-a-Service</h5>
+
+            <p>For organisations with a fairly traditional IT Operations department which cannot or will not change rapidly [enough], and for organisations who run all their applications in the public cloud (Amazon EC2, Rackspace, Azure, etc.), it probably helps to treat Operations as a team who simply provide the elastic infrastructure on which applications are deployed and run; the internal Ops team is thus directly equivalent to Amazon EC2, or Infrastructure-as-a-Service.</p>
+
+            <p>A team (perhaps a virtual team) within Dev then acts as a source of expertise about operational features, metrics, monitoring, server provisioning, etc., and probably does most of the communication with the IaaS team. This team is still a Dev team, however, following standard practices like TDD, CI, iterative development, coaching, etc.</p>
+
+            <p>The IaaS topology trades some potential effectiveness (losing direct collaboration with Ops people) for easier implementation, possibly deriving value more quickly than by trying for Type 1 (Smooth Collaboration) which could be attempted at a later date.</p>
+        </div>
+            
+        <div class="col-1-2">
+            <div class="spacer"></div>
+            <img src="images/type-3.png" alt="Type 3"/>
+            <div class="suitability medium">
+                <i class="fa fa-check-circle"></i>
+                <div class="suitability-inner">
+                <p><strong>Type 3 suitability:</strong> organisations with several different products and services, with a traditional Ops department, or whose applications run entirely in the public cloud.<br/>
+        <strong>Potential effectiveness:</strong> <strong><span>MEDIUM</span></strong></p>
+                </div>
+            </div>
+        </div>
+        </div>
+            
+        <div class="row">
+        <div class="col-1-2">
+            <div class="spacer"></div>
+            <img src="images/type-4.png" alt="Type 4"/>
+            <div class="suitability medium">
+                <i class="fa fa-check-circle"></i>
+                <div class="suitability-inner">
+                <p><strong>Type 4 suitability:</strong> smaller teams or organisations with limited experience of operational issues.<br/>
+        <strong>Potential effectiveness:</strong> <strong><span>MEDIUM</span></strong></p>
+                </div>
+            </div>
+        </div>
+            
+        <div class="col-1-2">
+            <h5><strong>Type 4:</strong> DevOps-as-a-Service</h5>
+
+            <p>Some organisations, particularly smaller ones, might not have the finances, experience, or staff to take a lead on the operational aspects of the software they produce. The Dev team might then reach out to a service provider like Rackspace to help them build test environments and automate their infrastructure and monitoring, and advise them on the kinds of operational features to implement during the software development cycles.</p>
+
+            <p>What might be called DevOps-as-a-Service could be a useful and pragmatic way for a small organisation or team to learn about automation, monitoring, and configuration management, and then perhaps move towards a Type 3 (IaaS) or even  Type 1 (Smooth Collaboration) model as they grow and take on more staff with operational focus.</p>
+        </div>
+        </div>    
+        
+        <div class="row">
+        <div class="col-1-2">
+            <h5><strong>Type 5:</strong> Temporary DevOps Team</h5>
+
+            <p>The Temporary DevOps Team (Type 5) looks substantially like Anti-Type B (DevOps Silo), but its intent and longevity are quite different. The temporary team has a mission to bring Dev and Ops closer together, ideally towards a Type 1 or Type 2 model, and eventually make itself obsolete.</p>
+
+<p>The members of the temporary team will ‘translate’ between Dev-speak and Ops-speak, introducing crazy ideas like stand-ups and Kanban for Ops teams, and thinking about dirty details like load-balancers, management NICs, and SSL offloading for Dev teams. If enough people start to see the value of bringing Dev and Ops together, then the temporary team has a real chance of achieving its aim; crucially, long-term responsibility for deployments and production diagnostics should not be given to the temporary team, otherwise it is likely to become a DevOps Silo (Anti-Type B).</p>
+        </div>
+            
+        <div class="col-1-2">
+            <div class="spacer"></div>
+            <img src="images/type-5.png" alt="Type 5"/>
+            <div class="suitability high">
+                <i class="fa fa-check-circle"></i>
+                <div class="suitability-inner">
+                <p><strong>Type 5 suitability:</strong> as a precursor to Type 1 topology, but beware the danger of Anti-Type B.<br/>
+        <strong>Potential effectiveness:</strong> <strong><span>LOW to HIGH</span></strong></p>
+                </div>
+            </div>
+        </div>
+        </div>
+            
+        <div class="row">
+        <div class="col-1-2">
+            <div class="spacer"></div>
+            <img src="images/type-6.png" alt="Type 6"/>
+            <div class="suitability medium">
+                <i class="fa fa-check-circle"></i>
+                <div class="suitability-inner">
+                <p><strong>Type 6 suitability:</strong> smaller teams or organisations with limited experience of operational issues.<br/>
+        <strong>Potential effectiveness:</strong> <strong><span>MEDIUM</span></strong></p>
+                </div>
+            </div>
+        </div>
+            
+        <div class="col-1-2">
+            <h5><strong>Type 6:</strong> ‘Facilitating’ DevOps Team</h5>
+
+            <p>Some organisations, particularly smaller ones, might not have the finances, experience, or staff to take a lead on the operational aspects of the software they produce. The Dev team might then reach out to a service provider like Rackspace to help them build test environments and automate their infrastructure and monitoring, and advise them on the kinds of operational features to implement during the software development cycles.</p>
+
+            <p>What might be called DevOps-as-a-Service could be a useful and pragmatic way for a small organisation or team to learn about automation, monitoring, and configuration management, and then perhaps move towards a Type 3 (IaaS) or even  Type 1 (Smooth Collaboration) model as they grow and take on more staff with operational focus.</p>
+        </div>
+        </div>    
+        
+        <div class="row">
+        <div class="col-1-2">
+            <h5><strong>Type 7:</strong> SRE Team (Google)</h5>
+
+            <p>The Temporary DevOps Team (Type 5) looks substantially like Anti-Type B (DevOps Silo), but its intent and longevity are quite different. The temporary team has a mission to bring Dev and Ops closer together, ideally towards a Type 1 or Type 2 model, and eventually make itself obsolete.</p>
+
+<p>The members of the temporary team will ‘translate’ between Dev-speak and Ops-speak, introducing crazy ideas like stand-ups and Kanban for Ops teams, and thinking about dirty details like load-balancers, management NICs, and SSL offloading for Dev teams. If enough people start to see the value of bringing Dev and Ops together, then the temporary team has a real chance of achieving its aim; crucially, long-term responsibility for deployments and production diagnostics should not be given to the temporary team, otherwise it is likely to become a DevOps Silo (Anti-Type B).</p>
+        </div>
+            
+        <div class="col-1-2">
+            <div class="spacer"></div>
+            <img src="images/type-7.png" alt="Type 7"/>
+            <div class="suitability high">
+                <i class="fa fa-check-circle"></i>
+                <div class="suitability-inner">
+                <p><strong>Type 7 suitability:</strong> as a precursor to Type 1 topology, but beware the danger of Anti-Type B.<br/>
+        <strong>Potential effectiveness:</strong> <strong><span>LOW to HIGH</span></strong></p>
+                </div>
+            </div>
+        </div>
+        </div>
+            
+        <div class="row">
+        <div class="col-1-2">
+            <div class="spacer"></div>
+            <img src="images/type-8.png" alt="Type 8"/>
+            <div class="suitability medium">
+                <i class="fa fa-check-circle"></i>
+                <div class="suitability-inner">
+                <p><strong>Type 8 suitability:</strong> smaller teams or organisations with limited experience of operational issues.<br/>
+        <strong>Potential effectiveness:</strong> <strong><span>MEDIUM</span></strong></p>
+                </div>
+            </div>
+        </div>
+            
+        <div class="col-1-2">
+            <h5><strong>Type 8:</strong> ‘Just run my Containers’</h5>
+
+            <p>Some organisations, particularly smaller ones, might not have the finances, experience, or staff to take a lead on the operational aspects of the software they produce. The Dev team might then reach out to a service provider like Rackspace to help them build test environments and automate their infrastructure and monitoring, and advise them on the kinds of operational features to implement during the software development cycles.</p>
+
+            <p>What might be called DevOps-as-a-Service could be a useful and pragmatic way for a small organisation or team to learn about automation, monitoring, and configuration management, and then perhaps move towards a Type 3 (IaaS) or even  Type 1 (Smooth Collaboration) model as they grow and take on more staff with operational focus.</p>
+        </div>
+        </div>    
+        
+        <div class="row">
+        <div class="col-1-2">
+            <h5><strong>Type 9:</strong> DB capability in Dev</h5>
+
+            <p>The Temporary DevOps Team (Type 5) looks substantially like Anti-Type B (DevOps Silo), but its intent and longevity are quite different. The temporary team has a mission to bring Dev and Ops closer together, ideally towards a Type 1 or Type 2 model, and eventually make itself obsolete.</p>
+
+<p>The members of the temporary team will ‘translate’ between Dev-speak and Ops-speak, introducing crazy ideas like stand-ups and Kanban for Ops teams, and thinking about dirty details like load-balancers, management NICs, and SSL offloading for Dev teams. If enough people start to see the value of bringing Dev and Ops together, then the temporary team has a real chance of achieving its aim; crucially, long-term responsibility for deployments and production diagnostics should not be given to the temporary team, otherwise it is likely to become a DevOps Silo (Anti-Type B).</p>
+        </div>
+            
+        <div class="col-1-2">
+            <div class="spacer"></div>
+            <img src="images/type-9.png" alt="Type 9"/>
+            <div class="suitability high">
+                <i class="fa fa-check-circle"></i>
+                <div class="suitability-inner">
+                <p><strong>Type  suitability:</strong> as a precursor to Type 1 topology, but beware the danger of Anti-Type B.<br/>
+        <strong>Potential effectiveness:</strong> <strong><span>LOW to HIGH</span></strong></p>
+                </div>
+            </div>
+        </div>
+        </div>
+            
+        
+    </div>
+        
+        <div class="full-width-section dark" style="background-color:#15253d;">
+        <div class="container">
+            <h2>Summary</h2>    
+            
+            <div class="sub-heading"><p>Exactly which DevOps team structure or topology will suit an organisation depends on several things:</p></div>
+           
+        <div class="row">    
+        <div class="col-1-4">
+            <p>The product set of the organisation: fewer products make for easier collaboration, as there will be fewer natural silos, as predicted by Conway’s Law.</p>
+        </div>
+            
+        <div class="col-1-4">
+            <p>The product set of the organisation: fewer products make for easier collaboration, as there will be fewer natural silos, as predicted by Conway’s Law.</p>
+        </div>  
+            
+        <div class="col-1-4">
+            <p>The product set of the organisation: fewer products make for easier collaboration, as there will be fewer natural silos, as predicted by Conway’s Law.</p>
+        </div>  
+            
+        <div class="col-1-4">
+            <p>The product set of the organisation: fewer products make for easier collaboration, as there will be fewer natural silos, as predicted by Conway’s Law.</p>
+        </div> 
+        </div>
+            
+            <p>Of course, there are variations on the themes outlined here; the topologies and types are meant as a reference guide or heuristic for assessing which patterns might be appropriate. In reality, a combination of more than one pattern, or one pattern transforming into another, will often be the best approach.</p>
+        </div>
+        </div>
+        
+    <script>
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 600);
+            return false;
+          }
+        }
+      });
+    });
+    </script>
+    </body>
+</html>
