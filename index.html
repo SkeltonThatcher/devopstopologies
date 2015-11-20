@@ -23,17 +23,52 @@
         </div>
     </header>
         
-    <div id="intro">
-    <div class="full-width-section" style="background-color:#fff;">
+                <div id="intro">
+                <div class="full-width-section" style="background-color:#fff;">
+                    <div class="container">
+                        <h4>Introduction</h4>
+
+                        <p>The primary goal of any DevOps setup within an organisation is to improve the delivery of value for customers and the business, not in itself to reduce costs, increase automation, or drive everything from configuration management; this means that different organisations might need different team structures in order for effective Dev and Ops collaboration to take place.</p>
+                    </div>
+                </div>
+                </div>
+
+            <div class="full-width-section dark" style="background-color:#15253d;">
         <div class="container">
-            <h4>Introduction</h4>
+            <h2>Summary</h2>    
             
-            <p>The primary goal of any DevOps setup within an organisation is to improve the delivery of value for customers and the business, not in itself to reduce costs, increase automation, or drive everything from configuration management; this means that different organisations might need different team structures in order for effective Dev and Ops collaboration to take place.</p>
+            <div class="sub-heading">
+                <p>Exactly which DevOps team structure or topology will suit an organisation depends on several things:</p></div>
+           
+        <div class="row">    
+        <div class="col-1-4">
+            <i class="custom-icon icon-businessman273">&#xe801;</i>
+            <p>The product set of the organisation: fewer products make for easier collaboration, as there will be fewer natural silos, as predicted by Conway’s Law.</p>
         </div>
-    </div>
-    </div>
+            
+        <div class="col-1-4">
+            <i class="custom-icon icon-businessman271">&#xe800;</i>
+            <p>The extent, strength, and effectiveness of technical leadership; whether Dev and Ops have a shared goal.</p>
+        </div>  
+            
+        <div class="col-1-4">
+            <i class="custom-icon icon-monitor145">&#xe803;</i>
+            <p>Whether an organisation has the capability or appetite to change its IT Operations department from ‘racking hardware’ and ‘configuring servers’ to real alignment with the value stream, and for operational features to be taken seriously by software teams.</p>
+        </div>  
+            
+        <div class="col-1-4">
+            <i class="custom-icon icon-tasks3">&#xe802;</i>
+            <p>Whether the organisation has the capacity or skills to take the lead on operational concerns.</p>
+        </div> 
+        </div>
+            
+            <div class="clear"></div>
+            
+            <p>Of course, there are variations on the themes outlined here; the topologies and types are meant as a reference guide or heuristic for assessing which patterns might be appropriate. In reality, a combination of more than one pattern, or one pattern transforming into another, will often be the best approach.</p>
+        </div>
+        </div>    
         
-    <div class="full-width-section dark" style="background-color:#15253d;">
+    <div class="full-width-section" style="background-color:#fff;">
         <div class="container">
         <div class="row">
         <div class="col-1-2">
@@ -60,23 +95,24 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
     </div>
         
-    <!--<div class="sub-nav" style="background-color:#e95234;">
+    <div class="sub-nav" style="background-color:#e95234;">
         <div class="container">
         <ul>
-        <li><a href="#"><strong>Anti-Type A</strong></a></li>  
-        <li><a href="#"><strong>Anti-Type B</strong></a></li>  
-        <li><a href="#"><strong>Anti-Type C</strong></a></li> 
-        <li><a href="#"><strong>Anti-Type D</strong></a></li> 
-        <li><a href="#"><strong>Anti-Type E</strong></a></li> 
-        <li><a href="#"><strong>Anti-Type F</strong></a></li> 
-        <li><a href="#"><strong>Anti-Type G</strong></a></li> 
+        <li><strong>Anti-Type</strong></li>
+        <li><a href="#anti-type-a">A</a></li>  
+        <li><a href="#anti-type-b">B</a></li>  
+        <li><a href="#anti-type-c">C</a></li>  
+        <li><a href="#anti-type-d">D</a></li>  
+        <li><a href="#anti-type-e">E</a></li>  
+        <li><a href="#anti-type-f">F</a></li>  
+        <li><a href="#anti-type-g">G</a></li>  
         </ul>
         </div>
-    </div>-->
+    </div>
         
     <div class="full-width-section anti-types">
         <div class="container">
-        <div class="row">    
+        <div id="anti-type-a" class="row">    
         <div class="col-1-2">
             <h5><strong>Anti-Type A:</strong> Separate Silos</h5>
 
@@ -92,7 +128,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>    
             
         <div class="row">
-        <div class="col-1-2">
+        <div id="anti-type-b" class="col-1-2">
             <div class="spacer"></div>
             <img src="images/anti-type-b.png" alt="Anti-Type B"/>
         </div>
@@ -106,7 +142,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
         </div>    
         
-        <div class="row">
+        <div id="anti-type-c" class="row">
         <div class="col-1-2">
             <h5><strong>Anti-Type C:</strong> "We Don't Need Ops"</h5>
 
@@ -121,7 +157,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
         </div>
             
-        <div class="row">    
+        <div id="anti-type-d" class="row">    
         <div class="col-1-2">
             <div class="spacer"></div>
             <img src="images/anti-type-d.png" alt="Anti-Type D"/>
@@ -136,7 +172,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
         </div>    
             
-        <div class="row">    
+        <div id="anti-type-e" class="row">    
         <div class="col-1-2">
             <h5><strong>Anti-Type E:</strong> DevOps as the new SysAdmin team</h5>
 
@@ -151,7 +187,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
         </div>     
         
-        <div class="row">
+        <div id="anti-type-f" class="row">
         <div class="col-1-2">
             <div class="spacer"></div>
             <img src="images/anti-type-f.png" alt="Anti-Type F"/>
@@ -166,7 +202,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
         </div>    
             
-        <div class="row">
+        <div id="anti-type-g" class="row">
         <div class="col-1-2">
             <h5><strong>Anti-Type G:</strong> Dev DBA Gap</h5>
 
@@ -197,23 +233,26 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
     </div>
         
-    <!--<div class="sub-nav" style="background-color:#e95234;">
+    <div class="sub-nav" style="background-color:#2786af;">
         <div class="container">
         <ul>
-        <li><a href="#"><strong>Anti-Type A</strong></a></li>  
-        <li><a href="#"><strong>Anti-Type B</strong></a></li>  
-        <li><a href="#"><strong>Anti-Type C</strong></a></li> 
-        <li><a href="#"><strong>Anti-Type D</strong></a></li> 
-        <li><a href="#"><strong>Anti-Type E</strong></a></li> 
-        <li><a href="#"><strong>Anti-Type F</strong></a></li> 
-        <li><a href="#"><strong>Anti-Type G</strong></a></li> 
+        <li><strong>Topologies</strong></li>
+        <li><a href="#type-one">1</a></li>  
+        <li><a href="#type-two">2</a></li>  
+        <li><a href="#type-three">3</a></li>  
+        <li><a href="#type-four">4</a></li>
+        <li><a href="#type-five">5</a></li>
+        <li><a href="#type-six">6</a></li>
+        <li><a href="#type-seven">7</a></li>
+        <li><a href="#type-eight">8</a></li>
+        <li><a href="#type-nine">9</a></li>
         </ul>
         </div>
-    </div>-->
+    </div>
         
     <div class="full-width-section topologies">
         <div class="container">
-        <div class="row">
+        <div id="type-one" class="row">
         <div class="col-1-2">
             <h5><strong>Type 1:</strong> Smooth Collaboration</h5>
 
@@ -235,7 +274,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
         </div>
             
-        <div class="row">
+        <div id="type-two" class="row">
         <div class="col-1-2">
             <div class="spacer"></div>
             <img src="images/type-2.png" alt="Type 2"/>
@@ -257,7 +296,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
         </div>    
         
-        <div class="row">
+        <div id="type-three" class="row">
         <div class="col-1-2">
             <h5><strong>Type 3:</strong> Infrastructure-as-a-Service</h5>
 
@@ -281,7 +320,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
         </div>
             
-        <div class="row">
+        <div id="type-four" class="row">
         <div class="col-1-2">
             <div class="spacer"></div>
             <img src="images/type-4.png" alt="Type 4"/>
@@ -303,7 +342,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
         </div>    
         
-        <div class="row">
+        <div id="type-five" class="row">
         <div class="col-1-2">
             <h5><strong>Type 5:</strong> Temporary DevOps Team</h5>
 
@@ -325,7 +364,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
         </div>
             
-        <div class="row">
+        <div id="type-six" class="row">
         <div class="col-1-2">
             <div class="spacer"></div>
             <img src="images/type-6.png" alt="Type 6"/>
@@ -347,7 +386,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
         </div>    
         
-        <div class="row">
+        <div id="type-seven" class="row">
         <div class="col-1-2">
             <h5><strong>Type 7:</strong> SRE Team (Google)</h5>
 
@@ -369,7 +408,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
         </div>
             
-        <div class="row">
+        <div id="type-eight" class="row">
         <div class="col-1-2">
             <div class="spacer"></div>
             <img src="images/type-8.png" alt="Type 8"/>
@@ -391,7 +430,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
         </div>    
         
-        <div class="row">
+        <div id="type-nine" class="row">
         <div class="col-1-2">
             <h5><strong>Type 9:</strong> DB capability in Dev</h5>
 
@@ -415,34 +454,6 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
             
         
     </div>
-        
-        <div class="full-width-section dark" style="background-color:#15253d;">
-        <div class="container">
-            <h2>Summary</h2>    
-            
-            <div class="sub-heading"><p>Exactly which DevOps team structure or topology will suit an organisation depends on several things:</p></div>
-           
-        <div class="row">    
-        <div class="col-1-4">
-            <p>The product set of the organisation: fewer products make for easier collaboration, as there will be fewer natural silos, as predicted by Conway’s Law.</p>
-        </div>
-            
-        <div class="col-1-4">
-            <p>The product set of the organisation: fewer products make for easier collaboration, as there will be fewer natural silos, as predicted by Conway’s Law.</p>
-        </div>  
-            
-        <div class="col-1-4">
-            <p>The product set of the organisation: fewer products make for easier collaboration, as there will be fewer natural silos, as predicted by Conway’s Law.</p>
-        </div>  
-            
-        <div class="col-1-4">
-            <p>The product set of the organisation: fewer products make for easier collaboration, as there will be fewer natural silos, as predicted by Conway’s Law.</p>
-        </div> 
-        </div>
-            
-            <p>Of course, there are variations on the themes outlined here; the topologies and types are meant as a reference guide or heuristic for assessing which patterns might be appropriate. In reality, a combination of more than one pattern, or one pattern transforming into another, will often be the best approach.</p>
-        </div>
-        </div>
         
     <script>
     $(function() {
