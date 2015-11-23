@@ -290,3 +290,13 @@ header .logo img {
     float:left;
     width:90%;
 }
+
+a {
+    text-decoration:none;
+    font-weight:700;
+    color:#23324a;
+}
+
+a:hover, a:focus {
+    color:#3e5983;
+}
