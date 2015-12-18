@@ -129,8 +129,15 @@ p {
     box-sizing:border-box;
 }
 
+.col-1-3 {
+    width:33.3%;
+    float:left;
+    padding:20px;
+    box-sizing:border-box;
+}
+
 @media (max-width:767px) {
-    .col-1-2 {
+    .col-1-2, .col-1-3 {
         width:100%;
         padding:0 20px;
     }
@@ -168,15 +175,59 @@ header {
     background-size:cover;
 }
 
+header .logo {
+    float:left;
+}
+
 header .logo img {
     max-width:241px;
 }
 
-@media (max-width:480px) {
+.header {
+    clear:both;
+}
+
+.header-fixed {
+    position:fixed;
+    width:100%;
+-webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+    z-index:2;
+}
+
+.nav {
+    float:right;
+    padding-top:10px;
+}
+
+.nav ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+    width:241px;
+}
+
+.nav ul li a {
+    color:#fff;
+    float:left;
+    display:block;
+    padding:0 0 0 20px;
+}
+
+
+@media (max-width:600px) {
     header .logo {
         max-width:241px;
         position:relative;
         margin:0 auto;
+        float:none;
+    }
+    
+    .nav {
+        display:none;
     }
 }
 
@@ -184,7 +235,7 @@ header .logo img {
     max-width:565px;
     position:relative;
     margin:0 auto;
-    padding:40px 0;
+    padding:0 40px 40px 40px;
     text-align:center;
 }
 
@@ -192,6 +243,61 @@ header .logo img {
     color:#fff;
     text-align:center;
     font-weight:300;
+}
+
+footer {
+    background:#15253d;
+}
+
+@media (min-width:767px) {
+#content {
+    position: relative;
+  z-index: 1;
+  margin: 0;
+  height: 100%;
+  /* however tall the footer is */
+  margin-bottom: 300px;
+    background:#fff;
+}
+
+footer {
+    background:#15253d;
+    min-height: 300px;
+  width: 100%;
+  padding-top: 1em;
+  color: white;
+  position: fixed;
+  bottom: 0; left: 0;
+}
+}
+
+footer h3 {
+    text-align:center;
+}
+
+footer h4, footer p, footer a {
+    color:#fff;
+}
+
+footer h4 {
+    margin:20px 0;
+    font-size:20px;
+}
+
+footer .col-1-3 {
+    padding-top:0;
+}
+
+.button {
+    padding:15px;
+    border-radius:3px;
+    display:block;
+    max-width:160px;
+    text-align:center;
+}
+
+.button.blue {
+    background:#2786af;
 }
 
 .down-arrow i {
@@ -299,4 +405,77 @@ a {
 
 a:hover, a:focus {
     color:#3e5983;
+}
+
+.author-image, .align-left {
+    float:left;
+    padding:0 20px 20px 0;
+    max-width:80px;
+}
+
+.thanks-link {
+    margin:20px 0;
+    text-align:center;
+    font-size:14px;
+}
+
+.tweet {
+    background:#6CADDE;
+    padding:5px 20px 20px 20px;
+    border-radius:3px;
+}
+
+.tweet p {
+    color:#fff;
+}
+
+.tweet-author {
+    font-weight:700;
+    color:#fff;
+    float:right;
+}
+
+.author-message {
+    background:#000;
+    width:100%;
+    padding:0;
+    box-sizing:border-box;
+    display:none;
+}
+
+.author-message p {
+    color:#fff;
+    float:left;
+    padding:0 10px;
+    margin:0;
+    font-size:12px;
+}
+
+.author-message a {
+    color:#2786af;
+}
+
+@media (max-width:480px) {
+    .author-message a {
+        clear:both;
+        display:block;
+    }
+}
+
+.close {
+    display:block;
+    float:right;
+    transition: all .2s ease-in-out;
+    font-size:12px;
+    padding:6px;
+}
+
+.close:hover { 
+    transform: scale(1.5); 
+}
+
+.author, .author:hover {
+    float:right;
+    background:#f55e40;
+    color:#fff;
 }
