@@ -80,7 +80,8 @@ h5 {
     }
     
     h5 {
-        font-size:18px;
+        font-size:22px;
+        font-weight:700 !important;
     }
 }
 
@@ -250,19 +251,19 @@ footer {
 }
 
 @media (min-width:767px) {
-#content {
+#content{
     position: relative;
   z-index: 1;
   margin: 0;
   height: 100%;
   /* however tall the footer is */
-  margin-bottom: 300px;
+  margin-bottom: 500px;
     background:#fff;
 }
 
 footer {
     background:#15253d;
-    min-height: 300px;
+    min-height: 400px;
   width: 100%;
   padding-top: 1em;
   color: white;
@@ -478,4 +479,22 @@ a:hover, a:focus {
     float:right;
     background:#f55e40;
     color:#fff;
+}
+
+.hidden-desktop {
+    display:none;
+}
+
+.hidden-mobile {
+    display:block;
+}
+
+@media (max-width:767px) {
+.hidden-desktop {
+    display:block;
+}
+
+.hidden-mobile {
+    display:none;
+}    
 }

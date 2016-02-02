@@ -146,10 +146,10 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
         </div>    
             
-        <div class="row">
-        <div id="anti-type-b" class="col-1-2">
+        <div id="anti-type-b" class="row">
+        <div class="col-1-2 hidden-mobile">
             <div class="spacer"></div>
-            <img src="images/anti-type-b.png" alt="Anti-Type B"/>
+            <img src="images/anti-type-b.png" alt="Anti-Type B" class=""/>
         </div>
             
         <div class="col-1-2">
@@ -158,6 +158,11 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
             <p>The DevOps Silo (Anti-Type B) typically results from a manager or exec deciding that they “need a bit of this DevOps thing” and starting a ‘DevOps team’ (probably full of people known as ‘a DevOp‘). The members of the DevOps team quickly form another silo, keeping Dev and Ops further apart than ever as they defend their corner, skills, and toolset from the ‘clueless Devs’ and ‘dinosaur Ops’ people.</p>
 
             <p>The only situation where a separate DevOps silo really makes sense is when the team is temporary, lasting less than (say) 12 or 18 months, with the express purpose of bringing Dev and Ops closer together, and with a clear mandate to make the DevOps team superfluous after that time; this becomes what I have called a <a href="#type-five">Type 5 DevOps Topology</a>.</p>
+        </div>
+            
+        <div class="col-1-2 hidden-desktop">
+            <div class="spacer"></div>
+            <img src="images/anti-type-b.png" alt="Anti-Type B" class=""/>
         </div>
         </div>    
         
@@ -177,7 +182,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
             
         <div id="anti-type-d" class="row">    
-        <div class="col-1-2">
+        <div class="col-1-2 hidden-mobile">
             <div class="spacer"></div>
             <img src="images/anti-type-d.png" alt="Anti-Type D"/>
         </div>
@@ -188,6 +193,11 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
             <p>This is the classic ‘throw it over the wall’ split between Dev and Ops. It means that story points can be claimed early (DONE means ‘feature-complete’, but not working in Production), and software operability suffers because Devs do not have enough context for operational features and Ops folk do not have time or inclination to engage Devs in order to fix the problems before the software goes live.</p>
 
             <p>We likely all know this topology is bad, but I think there are actually worse topologies; at least with <a href="#anti-type-a">Anti-Type A (Separate Silos)</a>, we know there is a problem.</p>
+        </div>
+            
+        <div class="col-1-2 hidden-desktop">
+            <div class="spacer"></div>
+            <img src="images/anti-type-d.png" alt="Anti-Type D"/>
         </div>
         </div>    
             
@@ -207,7 +217,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>     
         
         <div id="anti-type-f" class="row">
-        <div class="col-1-2">
+        <div class="col-1-2 hidden-mobile">
             <div class="spacer"></div>
             <img src="images/anti-type-f.png" alt="Anti-Type F"/>
             <div class="thanks-link">Thanks to Matt Franz
@@ -220,6 +230,13 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
             <p>This is the classic ‘throw it over the wall’ split between Dev and Ops. It means that story points can be claimed early (DONE means ‘feature-complete’, but not working in Production), and software operability suffers because Devs do not have enough context for operational features and Ops folk do not have time or inclination to engage Devs in order to fix the problems before the software goes live.</p>
 
             <p>We likely all know this topology is bad, but I think there are actually worse topologies; at least with <a href="#anti-type-a">Anti-Type A (Separate Silos)</a>, we know there is a problem.</p>
+        </div>
+            
+        <div class="col-1-2 hidden-desktop">
+            <div class="spacer"></div>
+            <img src="images/anti-type-f.png" alt="Anti-Type F"/>
+            <div class="thanks-link">Thanks to Matt Franz
+<a target="_blank" href="http://twitter.com/seclectech">(@seclectech)</a></div>
         </div>
         </div>    
             
@@ -295,7 +312,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
             
         <div id="type-two" class="row">
-        <div class="col-1-2">
+        <div class="col-1-2 hidden-mobile">
             <div class="spacer"></div>
             <img src="images/type-2.png" alt="Type 2"/>
             <div class="suitability high">
@@ -313,6 +330,18 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
             <p>Where operations people have been fully embedded within product development teams, we see a Type 2 topology. There is so little separation between Dev and Ops that all people are highly focused on a shared purpose; this is arguable a form of <a href="#type-one">Type 1</a>, but it has some special features.</p>
 
             <p>Organisations such as Netflix and Facebook with effectively a single web-based product have achieved this Type 2 Fully Embedded topology, but I think it’s probably not hugely applicable outside a narrow product focus, because the budgetary constraints and context-switching typically present in an organisation with multiple product streams will probably force Dev and Ops further apart (say, back to a <a href="#type-one">Type 1 model</a>). The Fully Embedded topology might also be called ‘NoOps‘, as there is no distinct or visible Operations team (although the Netflix NoOps might also be <a href="#type-three">Type 3, IaaS</a>).</p>
+        </div>
+            
+        <div class="col-1-2 hidden-desktop">
+            <div class="spacer"></div>
+            <img src="images/type-2.png" alt="Type 2"/>
+            <div class="suitability high">
+                <i class="fa fa-check-circle"></i>
+                <div class="suitability-inner">
+                <p><strong>Type 2 suitability:</strong> organisations with a single main web-based product or service.<br/>
+        <strong>Potential effectiveness:</strong> <strong><span>HIGH</span></strong></p>
+                </div>
+            </div>
         </div>
         </div>    
         
@@ -341,7 +370,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
             
         <div id="type-four" class="row">
-        <div class="col-1-2">
+        <div class="col-1-2 hidden-mobile">
             <div class="spacer"></div>
             <img src="images/type-4.png" alt="Type 4"/>
             <div class="suitability medium">
@@ -359,6 +388,18 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
             <p>Some organisations, particularly smaller ones, might not have the finances, experience, or staff to take a lead on the operational aspects of the software they produce. The Dev team might then reach out to a service provider like Rackspace to help them build test environments and automate their infrastructure and monitoring, and advise them on the kinds of operational features to implement during the software development cycles.</p>
 
             <p>What might be called DevOps-as-a-Service could be a useful and pragmatic way for a small organisation or team to learn about automation, monitoring, and configuration management, and then perhaps move towards a <a href="#type-three">Type 3 (IaaS)</a> or even  <a href="#type-one">Type 1 (Smooth Collaboration)</a> model as they grow and take on more staff with operational focus.</p>
+        </div>
+            
+        <div class="col-1-2 hidden-desktop">
+            <div class="spacer"></div>
+            <img src="images/type-4.png" alt="Type 4"/>
+            <div class="suitability medium">
+                <i class="fa fa-check-circle"></i>
+                <div class="suitability-inner">
+                <p><strong>Type 4 suitability:</strong> smaller teams or organisations with limited experience of operational issues.<br/>
+        <strong>Potential effectiveness:</strong> <strong><span>MEDIUM</span></strong></p>
+                </div>
+            </div>
         </div>
         </div>    
         
@@ -385,7 +426,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
             
         <div id="type-six" class="row">
-        <div class="col-1-2">
+        <div class="col-1-2 hidden-mobile">
             <div class="spacer"></div>
             <img src="images/type-6.png" alt="Type 6"/>
             <div class="thanks-link">Thanks to Eric Minick
@@ -407,6 +448,20 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
             <div class="tweet"><p>The goal for a "DevOps Team" should be to put itself out of business by enabling the rest of the org.</p>
             <div class="tweet-author"><i class="fa fa-twitter"></i> EricMinick</div>
                 <div class="clear"></div>
+            </div>
+        </div>
+            
+        <div class="col-1-2 hidden-desktop">
+            <div class="spacer"></div>
+            <img src="images/type-6.png" alt="Type 6"/>
+            <div class="thanks-link">Thanks to Eric Minick
+<a target="_blank" href="https://twitter.com/ericminick">(@EricMinick)</a></div>
+            <div class="suitability medium">
+                <i class="fa fa-check-circle"></i>
+                <div class="suitability-inner">
+                <p><strong>Type 6 suitability:</strong> organisations with a tendency for Dev and Ops to drift apart. Beware the danger of <a href="#anti-type-b">Anti-Type B.</a><br/>
+        <strong>Potential effectiveness:</strong> <strong><span>MEDIUM to HIGH</span></strong></p>
+                </div>
             </div>
         </div>
         </div>    
@@ -436,7 +491,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
             
         <div id="type-eight" class="row">
-        <div class="col-1-2">
+        <div class="col-1-2 hidden-mobile">
             <div class="spacer"></div>
             <img src="images/type-8.png" alt="Type 8"/>
                                     <div class="thanks-link">Thanks to J Buchanan
@@ -454,6 +509,20 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
             <h5><strong>Type 8:</strong> ‘Just run my Containers’</h5>
 
             <p>Containers remove the need for some kinds of collaboration between Dev and Ops by encapsulating the deployment and runtime requirements of an app into a container. In this way, the container acts as a boundary on the responsibilities of both Dev and Ops. With a sound engineering culture, the Type 8 model works well, but with if Dev starts to ignore operational considerations this model can revert towards to an adversarial 'us and them'.</p>
+        </div>
+            
+        <div class="col-1-2 hidden-desktop">
+            <div class="spacer"></div>
+            <img src="images/type-8.png" alt="Type 8"/>
+                                    <div class="thanks-link">Thanks to J Buchanan
+<a target="_blank" href="https://twitter.com/jascbu">(@jascbu)</a></div>
+            <div class="suitability medium">
+                <i class="fa fa-check-circle"></i>
+                <div class="suitability-inner">
+                <p><strong>Type 8 suitability:</strong> Containers can work very well, but beware Anti-Type 1, where the Ops team is expected to run anything that Dev throws at it.<br/>
+        <strong>Potential effectiveness:</strong> <strong><span>MEDIUM to HIGH</span></strong></p>
+                </div>
+            </div>
         </div>
         </div>    
         
