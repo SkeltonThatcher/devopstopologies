@@ -257,7 +257,7 @@ footer {
   margin: 0;
   height: 100%;
   /* however tall the footer is */
-  margin-bottom: 500px;
+  /*margin-bottom: 500px;*/
     background:#fff;
 }
 
