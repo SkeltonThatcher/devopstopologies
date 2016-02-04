@@ -263,11 +263,11 @@ footer {
 
 footer {
     background:#15253d;
-    min-height: 600px;
+    min-height: 400px;
   width: 100%;
   padding-top: 1em;
   color: white;
-  position: fixed;
+  position: static;
   bottom: 0; left: 0;
 }
 }
