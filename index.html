@@ -124,7 +124,7 @@
         </div>
             
         <div class="col-1-2">
-            <p>Most of these DevOps topologies have been described elsewhere before; in particular, Lawrence Sweeney of CollabNet goes into useful detail in a comment on Ben Kepes’s blog about what I characterise here as <a href="#anti-type-b">Anti-Type B (DevOps Silo)</a>, <a href="#type-three">Type 3 (IaaS)</a>, and <a href="#type-one">Type 1 (Smooth Integration)</a>. The DevOpsGuys have a list of Twelve DevOps Anti-Patterns, and Jez Humble, Gene Kim, Damon Edwards (and many others) have said similar things. I have added here three additional ‘topologies’ which I’ve not seen or heard discussed much (<a href="#type-two">Fully Embedded</a>, <a href="#type-four">DevOps-as-a-Service</a>, and <a href="#type-five">Temporary DevOps Team</a>).</p>  
+            <p>Most of these DevOps topologies have been described elsewhere before; in particular, Lawrence Sweeney of CollabNet goes into useful detail in a comment on Ben Kepes’s blog about what I characterise here as <a href="#anti-type-b">Anti-Type B (DevOps Team Silo)</a>, <a href="#type-three">Type 3 (Ops as IaaS)</a>, and <a href="#type-one">Type 1 (Dev and Ops Collaboration)</a>. The DevOpsGuys have a list of Twelve DevOps Anti-Patterns, and Jez Humble, Gene Kim, Damon Edwards (and many others) have said similar things. I have added here three additional ‘topologies’ which I’ve not seen or heard discussed much (<a href="#type-two">Shared Ops</a>, <a href="#type-four">DevOps-as-a-Service</a>, and <a href="#type-five">Temp DevOps Team</a>).</p>  
         </div>
         </div>
         </div>
@@ -146,14 +146,14 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
     <div class="sub-nav" style="background-color:#e95234;">
         <div class="container">
         <ul>
-        <li><strong>Anti-Type</strong></li>
-        <li><a href="#anti-type-a">A</a></li>  
-        <li><a href="#anti-type-b">B</a></li>  
-        <li><a href="#anti-type-c">C</a></li>  
-        <li><a href="#anti-type-d">D</a></li>  
-        <li><a href="#anti-type-e">E</a></li>  
-        <li><a href="#anti-type-f">F</a></li>  
-        <li><a href="#anti-type-g">G</a></li>  
+        <!--li><strong>Anti-Type</strong></li-->
+        <li><a href="#anti-type-a">A: Dev vs Ops</a></li>  
+        <li><a href="#anti-type-b">B: DevOps Silo</a></li>  
+        <li><a href="#anti-type-c">C: No Ops Needed</a></li>  
+        <li><a href="#anti-type-d">D: Tools Team</a></li>  
+        <li><a href="#anti-type-e">E: SysAdmin</a></li>  
+        <li><a href="#anti-type-f">F: Embedded Ops</a></li>  
+        <li><a href="#anti-type-g">G: Dev vs DBA</a></li>  
         </ul>
         </div>
     </div>
@@ -162,11 +162,11 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         <div class="container">
         <div id="anti-type-a" class="row">    
         <div class="col-1-2">
-            <h5><strong>Anti-Type A:</strong> Separate Silos</h5>
+            <h5><strong>Anti-Type A:</strong> Dev and Ops Silos</h5>
 
             <p>This is the classic ‘throw it over the wall’ split between Dev and Ops. It means that story points can be claimed early (DONE means ‘feature-complete’, but not working in Production), and software operability suffers because Devs do not have enough context for operational features and Ops folks do not have time or inclination to engage Devs in order to fix the problems before the software goes live.</p>
 
-            <p>We likely all know this topology is bad, but I think there are actually worse topologies; at least with Anti-Type A (Separate Silos), we know there is a problem.</p>
+            <p>We likely all know this topology is bad, but I think there are actually worse topologies; at least with Anti-Type A (Dev and Ops Silos), we know there is a problem.</p>
         </div>
             
         <div class="col-1-2">
@@ -182,9 +182,9 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
             
         <div class="col-1-2">
-            <h5><strong>Anti-Type B:</strong> Separate DevOps Silo</h5>
+            <h5><strong>Anti-Type B:</strong> DevOps Team Silo</h5>
 
-            <p>The DevOps Silo (Anti-Type B) typically results from a manager or exec deciding that they “need a bit of this DevOps thing” and starting a ‘DevOps team’ (probably full of people known as ‘a DevOp‘). The members of the DevOps team quickly form another silo, keeping Dev and Ops further apart than ever as they defend their corner, skills, and toolset from the ‘clueless Devs’ and ‘dinosaur Ops’ people.</p>
+            <p>The DevOps Team Silo (Anti-Type B) typically results from a manager or exec deciding that they “need a bit of this DevOps thing” and starting a ‘DevOps team’ (probably full of people known as ‘a DevOp‘). The members of the DevOps team quickly form another silo, keeping Dev and Ops further apart than ever as they defend their corner, skills, and toolset from the ‘clueless Devs’ and ‘dinosaur Ops’ people.</p>
 
             <p>The only situation where a separate DevOps silo really makes sense is when the team is temporary, lasting less than (say) 12 or 18 months, with the express purpose of bringing Dev and Ops closer together, and with a clear mandate to make the DevOps team superfluous after that time; this becomes what I have called a <a href="#type-five">Type 5 DevOps Topology</a>.</p>
         </div>
@@ -197,11 +197,11 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         
         <div id="anti-type-c" class="row">
         <div class="col-1-2">
-            <h5><strong>Anti-Type C:</strong> "We Don't Need Ops"</h5>
+            <h5><strong>Anti-Type C:</strong> Dev Don't Need Ops</h5>
 
             <p>This topology is borne of a combination of naivety and arrogance from developers and development managers, particularly when starting on new projects or systems. Assuming that Ops is now a thing of the past (“we have the Cloud now, right?”), the developers wildly underestimate the complexity and importance of operational skills and activities, and believe that they can do without them, or just cover them in spare hours.</p>
 
-            <p>Such an Anti-Type C DevOps topology will probably end up needing either a <a href="#type-three">Type 3 (IaaS)</a> or a <a href="#type-four">Type 4 DevOps topology (DevOps-as-a-Service)</a> when their software becomes more involved and operational activities start to swamp ‘development’ (aka coding) time. If only such teams recognised the importance of Operations as a discipline as important and valuable as software development, they would be able to avoid much pain and unnecessary (and quite basic) operational mistakes.</p>
+            <p>Such an Anti-Type C DevOps topology will probably end up needing either a <a href="#type-three">Type 3 (Ops as IaaS)</a> or a <a href="#type-four">Type 4 (DevOps-as-a-Service)</a> topology when their software becomes more involved and operational activities start to swamp ‘development’ (aka coding) time. If only such teams recognised the importance of Operations as a discipline as important and valuable as software development, they would be able to avoid much pain and unnecessary (and quite basic) operational mistakes.</p>
         </div>
             
         <div class="col-1-2">
@@ -217,7 +217,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
             
         <div class="col-1-2">
-            <h5><strong>Anti-Type D:</strong> ‘DevOps’ team as another Dev team</h5>
+            <h5><strong>Anti-Type D:</strong> DevOps as Tools Team</h5>
 
             <p>In order to "become DevOps" without losing current dev teams velocity (read delivery of functional stories), a DevOps team is set up to work on the tooling required for deployment pipelines, configuration management, environment management, etc. Meanwhile Ops folks continue to work in isolation and Dev teams continue to throw them applications "over the wall".</p>
 
@@ -232,7 +232,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
             
         <div id="anti-type-e" class="row">    
         <div class="col-1-2">
-            <h5><strong>Anti-Type E:</strong> DevOps as the new SysAdmin team</h5>
+            <h5><strong>Anti-Type E:</strong> Rebranded SysAdmin</h5>
 
             <p>This anti-type is typical in organizations with low engineering maturity. They want to improve their practices and reduce costs, yet they fail to see IT as a core driver of the business. Because industry successes with DevOps are now evident, they want to "do DevOps" as well. Unfortunately, instead of reflecting on the gaps in the current structure and relationships, they take the elusive path of hiring "DevOps engineers" for their Ops team(s).</p>
 
@@ -254,7 +254,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
             
         <div class="col-1-2">
-            <h5><strong>Anti-Type F:</strong> Ops embedded in a Dev Team</h5>
+            <h5><strong>Anti-Type F:</strong> Ops Embedded in Dev Team</h5>
 
             <p>The organization does not want to keep a separate Ops team, so development teams take responsibility for infrastructure, managing environments, monitoring, etc. However, doing so in a project or product-driven way means those items are subject to resource constraints and re-prioritizations which lead to subpar approaches and half-baked solutions.</p>
 
@@ -271,9 +271,9 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
             
         <div id="anti-type-g" class="row">
         <div class="col-1-2">
-            <h5><strong>Anti-Type G:</strong> Dev DBA Gap</h5>
+            <h5><strong>Anti-Type G:</strong> Dev and DBA Silos</h5>
 
-            <p>This is a form of <a href="#anti-type-a">Anti-Type A</a> which is prominent in medium-to-large companies where multiple legacy systems depend on the same core set of data. Because these databases are so vital for the business, a dedicated DBA team, often under the Ops umbrella, is responsible for their maintenance, performance tuning and disaster recovery. That is understandable. The problem is when this team becomes a gate keeper for any and every database change, effectively becoming an obstacle to small and frequent deployments (a core tenet of DevOps and Continuous Delivery).</p>
+            <p>This is a form of <a href="#anti-type-a">Anti-Type A (Dev and Ops Silos)</a> which is prominent in medium-to-large companies where multiple legacy systems depend on the same core set of data. Because these databases are so vital for the business, a dedicated DBA team, often under the Ops umbrella, is responsible for their maintenance, performance tuning and disaster recovery. That is understandable. The problem is when this team becomes a gate keeper for any and every database change, effectively becoming an obstacle to small and frequent deployments (a core tenet of DevOps and Continuous Delivery).</p>
 
             <p>Furthermore, just like Ops in <a href="#anti-type-a">Anti-Type A</a>, the DBA team is not involved early in the application development, thus data problems (migrations, performance, etc) are found late in the delivery cycle. Coupled with the overload of supporting multiple applications databases, the end result is constant firefighting and mounting pressure to deliver.</p>
         </div>
@@ -302,16 +302,16 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
     <div class="sub-nav" style="background-color:#2786af;">
         <div class="container">
         <ul>
-        <li><strong>Topologies</strong></li>
-        <li><a href="#type-one">1</a></li>  
-        <li><a href="#type-two">2</a></li>  
-        <li><a href="#type-three">3</a></li>  
-        <li><a href="#type-four">4</a></li>
-        <li><a href="#type-five">5</a></li>
-        <li><a href="#type-six">6</a></li>
-        <li><a href="#type-seven">7</a></li>
-        <li><a href="#type-eight">8</a></li>
-        <li><a href="#type-nine">9</a></li>
+        <!--li><strong>Topologies</strong></li-->
+        <li><a href="#type-one">1: Dev+Ops</a></li>  
+        <li><a href="#type-two">2: Shared Ops</a></li>  
+        <li><a href="#type-three">3: Ops as IaaS</a></li>  
+        <li><a href="#type-four">4: DevOps-as-a-Service</a></li>
+        <li><a href="#type-five">5: Temp DevOps Team</a></li>
+        <li><a href="#type-six">6: DevOps Evangelists</a></li>
+        <li><a href="#type-seven">7: SRE Team</a></li>
+        <li><a href="#type-eight">8: Container-Driven</a></li>
+        <li><a href="#type-nine">9: DB Capability</a></li>
         </ul>
         </div>
     </div>
@@ -320,11 +320,11 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         <div class="container">
         <div id="type-one" class="row">
         <div class="col-1-2">
-            <h5><strong>Type 1:</strong> Smooth Collaboration</h5>
+            <h5><strong>Type 1:</strong> Dev and Ops Collaboration</h5>
 
             <p>This is the ‘promised land’ of DevOps: smooth collaboration between Dev teams and Ops teams, each specialising where needed, but also sharing where needed. There are likely many separate Dev teams, each working on a separate or semi-separate product stack.</p>
 
-            <p>My sense is that the Type 1 Smooth Collaboration model needs quite substantial organisational change to establish it, and a good degree of competence higher up in the technical management team. Dev and Ops must have a clearly expressed and demonstrably effective shared goal (‘Delivering Reliable, Frequent Changes’, or whatever). Ops folks must be comfortable pairing with Devs and get to grips with test-driven coding and Git, and Devs must take operational features seriously and seek out Ops people for input into logging implementations, and so on, all of which needs quite a culture change from the recent past.</p>
+            <p>My sense is that this Type 1 model needs quite substantial organisational change to establish it, and a good degree of competence higher up in the technical management team. Dev and Ops must have a clearly expressed and demonstrably effective shared goal (‘Delivering Reliable, Frequent Changes’, or whatever). Ops folks must be comfortable pairing with Devs and get to grips with test-driven coding and Git, and Devs must take operational features seriously and seek out Ops people for input into logging implementations, and so on, all of which needs quite a culture change from the recent past.</p>
         </div>
             
         <div class="col-1-2">
@@ -354,11 +354,11 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
             
         <div class="col-1-2">
-            <h5><strong>Type 2:</strong> Fully Embedded</h5>
+            <h5><strong>Type 2:</strong> Fully Shared Ops Reponsibilities</h5>
 
-            <p>Where operations people have been integrated in product development teams, we see a Type 2 topology. There is so little separation between Dev and Ops that all people are highly focused on a shared purpose; this is arguable a form of <a href="#type-one">Type 1</a>, but it has some special features.</p>
+            <p>Where operations people have been integrated in product development teams, we see a Type 2 topology. There is so little separation between Dev and Ops that all people are highly focused on a shared purpose; this is arguable a form of <a href="#type-one">Type 1 (Dev and Ops Collaboration)</a>, but it has some special features.</p>
 
-            <p>Organisations such as Netflix and Facebook with effectively a single web-based product have achieved this Type 2 topology, but I think it’s probably not hugely applicable outside a narrow product focus, because the budgetary constraints and context-switching typically present in an organisation with multiple product streams will probably force Dev and Ops further apart (say, back to a <a href="#type-one">Type 1 model</a>). This topology might also be called ‘NoOps‘, as there is no distinct or visible Operations team (although the Netflix NoOps might also be <a href="#type-three">Type 3, IaaS</a>).</p>
+            <p>Organisations such as Netflix and Facebook with effectively a single web-based product have achieved this Type 2 topology, but I think it’s probably not hugely applicable outside a narrow product focus, because the budgetary constraints and context-switching typically present in an organisation with multiple product streams will probably force Dev and Ops further apart (say, back to a <a href="#type-one">Type 1 model</a>). This topology might also be called ‘NoOps‘, as there is no distinct or visible Operations team (although the Netflix NoOps might also be <a href="#type-three">Type 3 (Ops as IaaS)</a>).</p>
         </div>
             
         <div class="col-1-2 hidden-desktop">
@@ -376,13 +376,13 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         
         <div id="type-three" class="row">
         <div class="col-1-2">
-            <h5><strong>Type 3:</strong> Infrastructure-as-a-Service</h5>
+            <h5><strong>Type 3:</strong> Ops as Infrastructure-as-a-Service</h5>
 
             <p>For organisations with a fairly traditional IT Operations department which cannot or will not change rapidly [enough], and for organisations who run all their applications in the public cloud (Amazon EC2, Rackspace, Azure, etc.), it probably helps to treat Operations as a team who simply provides the elastic infrastructure on which applications are deployed and run; the internal Ops team is thus directly equivalent to Amazon EC2, or Infrastructure-as-a-Service.</p>
 
             <p>A team (perhaps a virtual team) within Dev then acts as a source of expertise about operational features, metrics, monitoring, server provisioning, etc., and probably does most of the communication with the IaaS team. This team is still a Dev team, however, following standard practices like TDD, CI, iterative development, coaching, etc.</p>
 
-            <p>The IaaS topology trades some potential effectiveness (losing direct collaboration with Ops people) for easier implementation, possibly deriving value more quickly than by trying for <a href="#type-one">Type 1 (Smooth Collaboration)</a> which could be attempted at a later date.</p>
+            <p>The IaaS topology trades some potential effectiveness (losing direct collaboration with Ops people) for easier implementation, possibly deriving value more quickly than by trying for <a href="#type-one">Type 1 (Dev and Ops Collaboration)</a> which could be attempted at a later date.</p>
         </div>
             
         <div class="col-1-2">
@@ -412,11 +412,11 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
             
         <div class="col-1-2">
-            <h5><strong>Type 4:</strong> DevOps-as-a-Service</h5>
+            <h5><strong>Type 4:</strong> DevOps as an External Service</h5>
 
             <p>Some organisations, particularly smaller ones, might not have the finances, experience, or staff to take a lead on the operational aspects of the software they produce. The Dev team might then reach out to a service provider like Rackspace to help them build test environments and automate their infrastructure and monitoring, and advise them on the kinds of operational features to implement during the software development cycles.</p>
 
-            <p>What might be called DevOps-as-a-Service could be a useful and pragmatic way for a small organisation or team to learn about automation, monitoring, and configuration management, and then perhaps move towards a <a href="#type-three">Type 3 (IaaS)</a> or even  <a href="#type-one">Type 1 (Smooth Collaboration)</a> model as they grow and take on more staff with operational focus.</p>
+            <p>What might be called DevOps-as-a-Service could be a useful and pragmatic way for a small organisation or team to learn about automation, monitoring, and configuration management, and then perhaps move towards a <a href="#type-three">Type 3 (Ops as IaaS)</a> or even  <a href="#type-one">Type 1 (Dev and Ops Collaboration)</a> model as they grow and take on more staff with operational focus.</p>
         </div>
             
         <div class="col-1-2 hidden-desktop">
@@ -434,11 +434,11 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         
         <div id="type-five" class="row">
         <div class="col-1-2">
-            <h5><strong>Type 5:</strong> Temporary DevOps Team</h5>
+            <h5><strong>Type 5:</strong> DevOps Team with an Expiry Date</h5>
 
-            <p>The Temporary DevOps Team (Type 5) looks substantially like <a href="#anti-type-b">Anti-Type B (DevOps Silo)</a>, but its intent and longevity are quite different. The temporary team has a mission to bring Dev and Ops closer together, ideally towards a <a href="#type-one">Type 1</a> or <a href="#type-two">Type 2 model</a>, and eventually make itself obsolete.</p>
+            <p>The DevOps Team with an Expiry Date (Type 5) looks substantially like <a href="#anti-type-b">Anti-Type B (DevOps Team Silo)</a>, but its intent and longevity are quite different. This temporary team has a mission to bring Dev and Ops closer together, ideally towards a <a href="#type-one">Type 1 (Dev and Ops Collaboration)</a> or <a href="#type-two">Type 2 (Fully Shared Ops Reponsibilities)</a> model, and eventually make itself obsolete.</p>
 
-<p>The members of the temporary team will ‘translate’ between Dev-speak and Ops-speak, introducing crazy ideas like stand-ups and Kanban for Ops teams, and thinking about dirty details like load-balancers, management NICs, and SSL offloading for Dev teams. If enough people start to see the value of bringing Dev and Ops together, then the temporary team has a real chance of achieving its aim; crucially, long-term responsibility for deployments and production diagnostics should not be given to the temporary team, otherwise it is likely to become a <a href="#anti-type-b">DevOps Silo (Anti-Type B).</a></p>
+            <p>The members of the temporary team will ‘translate’ between Dev-speak and Ops-speak, introducing crazy ideas like stand-ups and Kanban for Ops teams, and thinking about dirty details like load-balancers, management NICs, and SSL offloading for Dev teams. If enough people start to see the value of bringing Dev and Ops together, then the temporary team has a real chance of achieving its aim; crucially, long-term responsibility for deployments and production diagnostics should not be given to the temporary team, otherwise it is likely to become a <a href="#anti-type-b">DevOps Team Silo (Anti-Type B).</a></p>
         </div>
             
         <div class="col-1-2">
@@ -470,9 +470,9 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
             
         <div class="col-1-2">
-            <h5><strong>Type 6:</strong> ‘Facilitating’ DevOps Team</h5>
+            <h5><strong>Type 6:</strong> DevOps Evangelists Team</h5>
 
-            <p>Within organisations that have a large gap between Dev and Ops (or the tendency towards a large gap), it can be effective to have a 'facilitating' DevOps team that keeps the Dev and Ops sides talking. This is a version of <a href="#type-5">Type 5 (Temporary DevOps Team)</a> but where the DevOps team exists on an ongoing basis with the specific remit of facilitating collaboration and cooperation between Dev and Ops teams. Members of this team are sometimes called 'DevOps Evangelists', because they help to spread awareness of DevOps practices.</p>
+            <p>Within organisations that have a large gap between Dev and Ops (or the tendency towards a large gap), it can be effective to have a 'facilitating' DevOps team that keeps the Dev and Ops sides talking. This is a version of <a href="#type-five">Type 5 (DevOps Team with an Expiry Date)</a> but where the DevOps team exists on an ongoing basis with the specific remit of facilitating collaboration and cooperation between Dev and Ops teams. Members of this team are sometimes called 'DevOps Evangelists', because they help to spread awareness of DevOps practices.</p>
             
             <div class="tweet"><p><a href="https://twitter.com/ericminick/status/517335119330172930">The goal for a "DevOps Team" should be to put itself out of business by enabling the rest of the org.</a></p>
             <div class="tweet-author"><i class="fa fa-twitter"></i><a href="https://twitter.com/ericminick">EricMinick</a></div>
@@ -488,7 +488,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
             <div class="suitability medium">
                 <i class="fa fa-check-circle"></i>
                 <div class="suitability-inner">
-                <p><strong>Type 6 suitability:</strong> organisations with a tendency for Dev and Ops to drift apart. Beware the danger of <a href="#anti-type-b">Anti-Type B.</a><br/>
+                <p><strong>Type 6 suitability:</strong> organisations with a tendency for Dev and Ops to drift apart. Beware the danger of <a href="#anti-type-b">Anti-Type B</a>.<br/>
         <strong>Potential effectiveness:</strong> <strong><span>MEDIUM to HIGH</span></strong></p>
                 </div>
             </div>
@@ -497,9 +497,9 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         
         <div id="type-seven" class="row">
         <div class="col-1-2">
-            <h5><strong>Type 7:</strong> SRE Team (Google)</h5>
+            <h5><strong>Type 7:</strong> SRE Team (Google Model)</h5>
 
-            <p>DevOps often recommends that Dev teams join the on-call rotation, but it's not essential. In fact, some organisations (including Google) run a different model, with an explicit 'hand-off' from Development to the team that runs the software, the Site Reliability Engineering (SRE) team. In this model, the Dev teams need to provide test evidence (logs, metrics, etc..) to the SRE team showing that their software is of a good enough standard to be supported by the SRE team.</p>
+            <p>DevOps often recommends that Dev teams join the on-call rotation, but it's not essential. In fact, some organisations (including Google) run a different model, with an explicit 'hand-off' from Development to the team that runs the software, the Site Reliability Engineering (SRE) team. In this model, the Dev teams need to provide test evidence (logs, metrics, etc.) to the SRE team showing that their software is of a good enough standard to be supported by the SRE team.</p>
 
             <p>Crucially, the SRE team can reject software that is operationally substandard, asking the Developers to improve the code before it is put into Production. Collaboration between Dev and SRE happens around operational criteria but once the SRE team is happy with the code, they (and not the Dev team) support it in Production.</p>
         </div>
@@ -523,8 +523,9 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         <div class="col-1-2 hidden-mobile">
             <div class="spacer"></div>
             <img src="images/type-8.png" alt="Type 8"/>
-                                    <div class="thanks-link">Thanks to J Buchanan
-<a target="_blank" href="https://twitter.com/jascbu">(@jascbu)</a></div>
+            <div class="thanks-link">Thanks to J Buchanan
+                <a target="_blank" href="https://twitter.com/jascbu">(@jascbu)</a>
+            </div>
             <div class="suitability medium">
                 <i class="fa fa-check-circle"></i>
                 <div class="suitability-inner">
@@ -535,16 +536,16 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         </div>
             
         <div class="col-1-2">
-            <h5><strong>Type 8:</strong> ‘Just run my Containers’</h5>
+            <h5><strong>Type 8:</strong> Container-Driven Collaboration</h5>
 
-            <p>Containers remove the need for some kinds of collaboration between Dev and Ops by encapsulating the deployment and runtime requirements of an app into a container. In this way, the container acts as a boundary on the responsibilities of both Dev and Ops. With a sound engineering culture, the Type 8 model works well, but if Dev starts to ignore operational considerations this model can revert towards to an adversarial 'us and them'.</p>
+            <p>Containers remove the need for some kinds of collaboration between Dev and Ops by encapsulating the deployment and runtime requirements of an app into a container. In this way, the container acts as a boundary on the responsibilities of both Dev and Ops. With a sound engineering culture, the Container-Driven Collaboration model works well, but if Dev starts to ignore operational considerations this model can revert towards to an adversarial 'us and them'.</p>
         </div>
             
         <div class="col-1-2 hidden-desktop">
             <div class="spacer"></div>
             <img src="images/type-8.png" alt="Type 8"/>
-                                    <div class="thanks-link">Thanks to J Buchanan
-<a target="_blank" href="https://twitter.com/jascbu">(@jascbu)</a></div>
+            <div class="thanks-link">Thanks to J Buchanan<a target="_blank" href="https://twitter.com/jascbu">(@jascbu)</a>
+            </div>
             <div class="suitability medium">
                 <i class="fa fa-check-circle"></i>
                 <div class="suitability-inner">
@@ -557,7 +558,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         
         <div id="type-nine" class="row">
         <div class="col-1-2">
-            <h5><strong>Type 9:</strong> DB capability in Dev</h5>
+            <h5><strong>Type 9:</strong> Dev and DBA Collaboration</h5>
 
             <p>In order to bridge the Dev-DBA chasm, some organisations have experimented with something like Type 9, where a database capability from the DBA team is complimented with a database capability (or specialism) from the Dev team. This seems to help to translate between the Dev-centric view of databases (as essentially dumb persistence stores for apps) and the DBA-centric view of databases (smart, rich sources of business value).</p>
         </div>
@@ -588,7 +589,7 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         <h4>Have Your Say</h4>
             
         <p>Have you seen team topologies that are not represented here?</p>
-        <p>Which diagramming tools should we use in the future? <a href="http://casual-effects.com/markdeep/">Markdeep</a>? <a href="http://www.w3schools.com/svg/">SVG</a>?</p>
+        <p>Which diagramming tools should we use in the future? <!--a href="http://casual-effects.com/markdeep/">Markdeep</a>? <a href="http://www.w3schools.com/svg/">SVG</a>?<--></p>
 
         <a class="button blue" href="http://web.devopstopologies.com/#disqus_thread">Make a suggestion</a>
         </div>
