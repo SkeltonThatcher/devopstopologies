@@ -219,9 +219,9 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         <div class="col-1-2">
             <h5><strong>Anti-Type D:</strong> ‘DevOps’ team as another Dev team</h5>
 
-            <p>This is the classic ‘throw it over the wall’ split between Dev and Ops. It means that story points can be claimed early (DONE means ‘feature-complete’, but not working in Production), and software operability suffers because Devs do not have enough context for operational features and Ops folks do not have time or inclination to engage Devs in order to fix the problems before the software goes live.</p>
+            <p>In order to "become DevOps" without losing current dev teams velocity (read delivery of functional stories), a DevOps team is set up to work on the tooling required for deployment pipelines, configuration management, environment management, etc. Meanwhile Ops folks continue to work in isolation and Dev teams continue to throw them applications "over the wall".</p>
 
-            <p>We likely all know this topology is bad, but I think there are actually worse topologies; at least with <a href="#anti-type-a">Anti-Type A (Separate Silos)</a>, we know there is a problem.</p>
+            <p>Although the outcomes of this dedicated team can be beneficial in terms of an improved tool chain, its impact is limited. The fundamental problem of lack of early Ops involvement and collaboration in the application development lifecycle remains unchanged.</p>
         </div>
             
         <div class="col-1-2 hidden-desktop">
@@ -234,9 +234,9 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         <div class="col-1-2">
             <h5><strong>Anti-Type E:</strong> DevOps as the new SysAdmin team</h5>
 
-            <p>This is the classic ‘throw it over the wall’ split between Dev and Ops. It means that story points can be claimed early (DONE means ‘feature-complete’, but not working in Production), and software operability suffers because Devs do not have enough context for operational features and Ops folks do not have time or inclination to engage Devs in order to fix the problems before the software goes live.</p>
+            <p>This anti-type is typical in organizations with low engineering maturity. They want to improve their practices and reduce costs, yet they fail to see IT as a core driver of the business. Because industry successes with DevOps are now evident, they want to "do DevOps" as well. Unfortunately, instead of reflecting on the gaps in the current structure and relationships, they take the elusive path of hiring "DevOps engineers" for their Ops team(s).</p>
 
-            <p>We likely all know this topology is bad, but I think there are actually worse topologies; at least with <a href="#anti-type-a">Anti-Type A (Separate Silos)</a>, we know there is a problem.</p>
+            <p>DevOps becomes just a rebranding of the role previously known as SysAdmin, with no real cultural/organizational change taking place. This anti-type is becoming more and more widespread as unscrupulous recruiters jump on the bandwagon searching for candidates with automation and tooling skills. Unfortunately, it's the human communication skills that can make DevOps thrive in an organization.</p>
         </div>
             
         <div class="col-1-2">
@@ -256,9 +256,9 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         <div class="col-1-2">
             <h5><strong>Anti-Type F:</strong> Ops embedded in a Dev Team</h5>
 
-            <p>This is the classic ‘throw it over the wall’ split between Dev and Ops. It means that story points can be claimed early (DONE means ‘feature-complete’, but not working in Production), and software operability suffers because Devs do not have enough context for operational features and Ops folks do not have time or inclination to engage Devs in order to fix the problems before the software goes live.</p>
+            <p>The organization does not want to keep a separate Ops team, so development teams take responsibility for infrastructure, managing environments, monitoring, etc. However, doing so in a project or product-driven way means those items are subject to resource constraints and re-prioritizations which lead to subpar approaches and half-baked solutions.</p>
 
-            <p>We likely all know this topology is bad, but I think there are actually worse topologies; at least with <a href="#anti-type-a">Anti-Type A (Separate Silos)</a>, we know there is a problem.</p>
+            <p>In this anti-type the organization shows lack of appreciation for the importance and skills required for effective IT operations.</p>
         </div>
             
         <div class="col-1-2 hidden-desktop">
@@ -273,9 +273,9 @@ we might call ‘anti-types’ (after the ubiquitous ‘anti-pattern‘).</p>
         <div class="col-1-2">
             <h5><strong>Anti-Type G:</strong> Dev DBA Gap</h5>
 
-            <p>This is the classic ‘throw it over the wall’ split between Dev and Ops. It means that story points can be claimed early (DONE means ‘feature-complete’, but not working in Production), and software operability suffers because Devs do not have enough context for operational features and Ops folks do not have time or inclination to engage Devs in order to fix the problems before the software goes live.</p>
+            <p>This is a form of <a href="#anti-type-a">Anti-Type A</a> which is prominent in medium-to-large companies where multiple legacy systems depend on the same core set of data. Because these databases are so vital for the business, a dedicated DBA team, often under the Ops umbrella, is responsible for their maintenance, performance tuning and disaster recovery. That is understandable. The problem is when this team becomes a gate keeper for any and every database change, effectively becoming an obstacle to small and frequent deployments (a core tenet of DevOps and Continuous Delivery).</p>
 
-            <p>We likely all know this topology is bad, but I think there are actually worse topologies; at least with <a href="#anti-type-a">Anti-Type A (Separate Silos)</a>, we know there is a problem.</p>
+            <p>Furthermore, just like Ops in <a href="#anti-type-a">Anti-Type A</a>, the DBA team is not involved early in the application development, thus data problems (migrations, performance, etc) are found late in the delivery cycle. Coupled with the overload of supporting multiple applications databases, the end result is constant firefighting and mounting pressure to deliver.</p>
         </div>
             
         <div class="col-1-2">
