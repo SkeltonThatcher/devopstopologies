@@ -498,3 +498,8 @@ a:hover, a:focus {
     display:none;
 }    
 }
+
+.signup {
+    border: 2px solid silver;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+}
