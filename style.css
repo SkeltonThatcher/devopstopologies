@@ -236,7 +236,7 @@ header .logo img {
     max-width:565px;
     position:relative;
     margin:0 auto;
-    padding:0 40px 40px 40px;
+    padding:40px 40px 40px 40px;
     text-align:center;
 }
 
@@ -467,7 +467,7 @@ a:hover, a:focus {
     display:block;
     float:right;
     transition: all .2s ease-in-out;
-    font-size:12px;
+    font-size:36px;
     padding:6px;
 }
 
