@@ -503,3 +503,8 @@ a:hover, a:focus {
     border: 2px solid silver;
     padding: 0.5em 0.5em 0.5em 0.5em;
 }
+
+.cc-banner {
+    margin:0 20px 0 20px;
+    clear:both;
+}
